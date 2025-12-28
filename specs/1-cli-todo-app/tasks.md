@@ -28,12 +28,12 @@ Based on plan.md structure:
 
 **Purpose**: Project initialization with UV and dependencies
 
-- [ ] T001 Create pyproject.toml with UV configuration in pyproject.toml
-- [ ] T002 [P] Create src/__init__.py package marker
-- [ ] T003 [P] Create src/commands/__init__.py package marker
-- [ ] T004 [P] Create tests/__init__.py package marker
-- [ ] T005 [P] Create tests/test_commands/__init__.py package marker
-- [ ] T006 Run `uv sync` to install dependencies and verify environment
+- [x] T001 Create pyproject.toml with UV configuration in pyproject.toml
+- [x] T002 [P] Create src/__init__.py package marker
+- [x] T003 [P] Create src/commands/__init__.py package marker
+- [x] T004 [P] Create tests/__init__.py package marker
+- [x] T005 [P] Create tests/test_commands/__init__.py package marker
+- [x] T006 Run `uv sync` to install dependencies and verify environment
 
 **Checkpoint**: Project structure ready, dependencies installed
 
@@ -47,38 +47,38 @@ Based on plan.md structure:
 
 ### Core Models
 
-- [ ] T007 Implement Task Pydantic model in src/models.py
-- [ ] T008 Implement TaskCreate input model in src/models.py
-- [ ] T009 Implement TaskUpdate input model in src/models.py
+- [x] T007 Implement Task Pydantic model in src/models.py
+- [x] T008 Implement TaskCreate input model in src/models.py
+- [x] T009 Implement TaskUpdate input model in src/models.py
 
 ### Storage Layer
 
-- [ ] T010 Implement TaskStorage class with __init__ in src/storage.py
-- [ ] T011 Implement TaskStorage.add() method in src/storage.py
-- [ ] T012 Implement TaskStorage.get() method in src/storage.py
-- [ ] T013 Implement TaskStorage.get_all() method in src/storage.py
-- [ ] T014 Implement TaskStorage.update() method in src/storage.py
-- [ ] T015 Implement TaskStorage.delete() method in src/storage.py
-- [ ] T016 Implement TaskStorage.mark_complete() method in src/storage.py
+- [x] T010 Implement TaskStorage class with __init__ in src/storage.py
+- [x] T011 Implement TaskStorage.add() method in src/storage.py
+- [x] T012 Implement TaskStorage.get() method in src/storage.py
+- [x] T013 Implement TaskStorage.get_all() method in src/storage.py
+- [x] T014 Implement TaskStorage.update() method in src/storage.py
+- [x] T015 Implement TaskStorage.delete() method in src/storage.py
+- [x] T016 Implement TaskStorage.mark_complete() method in src/storage.py
 
 ### Command Pattern Base
 
-- [ ] T017 Implement abstract Command base class in src/commands/base.py
+- [x] T017 Implement abstract Command base class in src/commands/base.py
 
 ### UI Utilities
 
-- [ ] T018 [P] Create Console singleton in src/ui.py
-- [ ] T019 [P] Implement display_success() function in src/ui.py
-- [ ] T020 [P] Implement display_error() function in src/ui.py
-- [ ] T021 [P] Implement display_info() function in src/ui.py
-- [ ] T022 Implement display_menu() function in src/ui.py
-- [ ] T023 Implement display_task_table() function in src/ui.py
+- [x] T018 [P] Create Console singleton in src/ui.py
+- [x] T019 [P] Implement display_success() function in src/ui.py
+- [x] T020 [P] Implement display_error() function in src/ui.py
+- [x] T021 [P] Implement display_info() function in src/ui.py
+- [x] T022 Implement display_menu() function in src/ui.py
+- [x] T023 Implement display_task_table() function in src/ui.py
 
 ### Foundational Tests
 
-- [ ] T024 [P] Create pytest fixtures in tests/conftest.py
-- [ ] T025 [P] Write Task model validation tests in tests/test_models.py
-- [ ] T026 Write TaskStorage CRUD tests in tests/test_storage.py
+- [x] T024 [P] Create pytest fixtures in tests/conftest.py
+- [x] T025 [P] Write Task model validation tests in tests/test_models.py
+- [x] T026 Write TaskStorage CRUD tests in tests/test_storage.py
 
 **Checkpoint**: Foundation ready - models, storage, UI utilities, and base command in place
 
@@ -92,16 +92,16 @@ Based on plan.md structure:
 
 ### Implementation for User Story 1
 
-- [ ] T027 [US1] Implement AddTaskCommand class in src/commands/add.py
-- [ ] T028 [US1] Add input prompts for title and description in AddTaskCommand
-- [ ] T029 [US1] Add validation error handling for empty/long title in AddTaskCommand
-- [ ] T030 [US1] Add validation error handling for long description in AddTaskCommand
-- [ ] T031 [US1] Export AddTaskCommand in src/commands/__init__.py
+- [x] T027 [US1] Implement AddTaskCommand class in src/commands/add.py
+- [x] T028 [US1] Add input prompts for title and description in AddTaskCommand
+- [x] T029 [US1] Add validation error handling for empty/long title in AddTaskCommand
+- [x] T030 [US1] Add validation error handling for long description in AddTaskCommand
+- [x] T031 [US1] Export AddTaskCommand in src/commands/__init__.py
 
 ### Tests for User Story 1
 
-- [ ] T032 [P] [US1] Write AddTaskCommand success tests in tests/test_commands/test_add.py
-- [ ] T033 [P] [US1] Write AddTaskCommand validation error tests in tests/test_commands/test_add.py
+- [x] T032 [P] [US1] Write AddTaskCommand success tests in tests/test_commands/test_add.py
+- [x] T033 [P] [US1] Write AddTaskCommand validation error tests in tests/test_commands/test_add.py
 
 **Checkpoint**: User Story 1 complete - can add tasks with validation
 
@@ -115,15 +115,15 @@ Based on plan.md structure:
 
 ### Implementation for User Story 2
 
-- [ ] T034 [US2] Implement ListTasksCommand class in src/commands/list.py
-- [ ] T035 [US2] Add empty state handling ("No tasks found") in ListTasksCommand
-- [ ] T036 [US2] Add task count summary (pending/completed) in ListTasksCommand
-- [ ] T037 [US2] Export ListTasksCommand in src/commands/__init__.py
+- [x] T034 [US2] Implement ListTasksCommand class in src/commands/list.py
+- [x] T035 [US2] Add empty state handling ("No tasks found") in ListTasksCommand
+- [x] T036 [US2] Add task count summary (pending/completed) in ListTasksCommand
+- [x] T037 [US2] Export ListTasksCommand in src/commands/__init__.py
 
 ### Tests for User Story 2
 
-- [ ] T038 [P] [US2] Write ListTasksCommand with tasks tests in tests/test_commands/test_list.py
-- [ ] T039 [P] [US2] Write ListTasksCommand empty state tests in tests/test_commands/test_list.py
+- [x] T038 [P] [US2] Write ListTasksCommand with tasks tests in tests/test_commands/test_list.py
+- [x] T039 [P] [US2] Write ListTasksCommand empty state tests in tests/test_commands/test_list.py
 
 **Checkpoint**: User Story 2 complete - can view tasks in formatted table
 
@@ -137,16 +137,16 @@ Based on plan.md structure:
 
 ### Implementation for User Story 6
 
-- [ ] T040 [US6] Implement main menu loop in src/main.py
-- [ ] T041 [US6] Add menu option selection and validation in src/main.py
-- [ ] T042 [US6] Add invalid option error handling in src/main.py
-- [ ] T043 [US6] Add graceful exit with goodbye message in src/main.py
-- [ ] T044 [US6] Add Ctrl+C (KeyboardInterrupt) handling in src/main.py
+- [x] T040 [US6] Implement main menu loop in src/main.py
+- [x] T041 [US6] Add menu option selection and validation in src/main.py
+- [x] T042 [US6] Add invalid option error handling in src/main.py
+- [x] T043 [US6] Add graceful exit with goodbye message in src/main.py
+- [x] T044 [US6] Add Ctrl+C (KeyboardInterrupt) handling in src/main.py
 
 ### Tests for User Story 6
 
-- [ ] T045 [P] [US6] Write main menu display tests in tests/test_main.py
-- [ ] T046 [P] [US6] Write invalid option handling tests in tests/test_main.py
+- [x] T045 [P] [US6] Write main menu display tests in tests/test_main.py
+- [x] T046 [P] [US6] Write invalid option handling tests in tests/test_main.py
 
 **Checkpoint**: MVP Complete - Can add tasks, view list, navigate menu, and exit
 
@@ -160,17 +160,17 @@ Based on plan.md structure:
 
 ### Implementation for User Story 3
 
-- [ ] T047 [US3] Implement CompleteTaskCommand class in src/commands/complete.py
-- [ ] T048 [US3] Add task ID input prompt in CompleteTaskCommand
-- [ ] T049 [US3] Add "already completed" informational message in CompleteTaskCommand
-- [ ] T050 [US3] Add "task not found" error handling in CompleteTaskCommand
-- [ ] T051 [US3] Export CompleteTaskCommand in src/commands/__init__.py
+- [x] T047 [US3] Implement CompleteTaskCommand class in src/commands/complete.py
+- [x] T048 [US3] Add task ID input prompt in CompleteTaskCommand
+- [x] T049 [US3] Add "already completed" informational message in CompleteTaskCommand
+- [x] T050 [US3] Add "task not found" error handling in CompleteTaskCommand
+- [x] T051 [US3] Export CompleteTaskCommand in src/commands/__init__.py
 
 ### Tests for User Story 3
 
-- [ ] T052 [P] [US3] Write CompleteTaskCommand success tests in tests/test_commands/test_complete.py
-- [ ] T053 [P] [US3] Write CompleteTaskCommand already-complete tests in tests/test_commands/test_complete.py
-- [ ] T054 [P] [US3] Write CompleteTaskCommand not-found tests in tests/test_commands/test_complete.py
+- [x] T052 [P] [US3] Write CompleteTaskCommand success tests in tests/test_commands/test_complete.py
+- [x] T053 [P] [US3] Write CompleteTaskCommand already-complete tests in tests/test_commands/test_complete.py
+- [x] T054 [P] [US3] Write CompleteTaskCommand not-found tests in tests/test_commands/test_complete.py
 
 **Checkpoint**: User Story 3 complete - can mark tasks as complete
 
@@ -184,19 +184,19 @@ Based on plan.md structure:
 
 ### Implementation for User Story 4
 
-- [ ] T055 [US4] Implement UpdateTaskCommand class in src/commands/update.py
-- [ ] T056 [US4] Add task ID input prompt in UpdateTaskCommand
-- [ ] T057 [US4] Add optional title/description prompts in UpdateTaskCommand
-- [ ] T058 [US4] Add "no changes made" handling in UpdateTaskCommand
-- [ ] T059 [US4] Add "task not found" error handling in UpdateTaskCommand
-- [ ] T060 [US4] Export UpdateTaskCommand in src/commands/__init__.py
+- [x] T055 [US4] Implement UpdateTaskCommand class in src/commands/update.py
+- [x] T056 [US4] Add task ID input prompt in UpdateTaskCommand
+- [x] T057 [US4] Add optional title/description prompts in UpdateTaskCommand
+- [x] T058 [US4] Add "no changes made" handling in UpdateTaskCommand
+- [x] T059 [US4] Add "task not found" error handling in UpdateTaskCommand
+- [x] T060 [US4] Export UpdateTaskCommand in src/commands/__init__.py
 
 ### Tests for User Story 4
 
-- [ ] T061 [P] [US4] Write UpdateTaskCommand success tests in tests/test_commands/test_update.py
-- [ ] T062 [P] [US4] Write UpdateTaskCommand partial-update tests in tests/test_commands/test_update.py
-- [ ] T063 [P] [US4] Write UpdateTaskCommand no-changes tests in tests/test_commands/test_update.py
-- [ ] T064 [P] [US4] Write UpdateTaskCommand not-found tests in tests/test_commands/test_update.py
+- [x] T061 [P] [US4] Write UpdateTaskCommand success tests in tests/test_commands/test_update.py
+- [x] T062 [P] [US4] Write UpdateTaskCommand partial-update tests in tests/test_commands/test_update.py
+- [x] T063 [P] [US4] Write UpdateTaskCommand no-changes tests in tests/test_commands/test_update.py
+- [x] T064 [P] [US4] Write UpdateTaskCommand not-found tests in tests/test_commands/test_update.py
 
 **Checkpoint**: User Story 4 complete - can update tasks
 
@@ -210,15 +210,15 @@ Based on plan.md structure:
 
 ### Implementation for User Story 5
 
-- [ ] T065 [US5] Implement DeleteTaskCommand class in src/commands/delete.py
-- [ ] T066 [US5] Add task ID input prompt in DeleteTaskCommand
-- [ ] T067 [US5] Add "task not found" error handling in DeleteTaskCommand
-- [ ] T068 [US5] Export DeleteTaskCommand in src/commands/__init__.py
+- [x] T065 [US5] Implement DeleteTaskCommand class in src/commands/delete.py
+- [x] T066 [US5] Add task ID input prompt in DeleteTaskCommand
+- [x] T067 [US5] Add "task not found" error handling in DeleteTaskCommand
+- [x] T068 [US5] Export DeleteTaskCommand in src/commands/__init__.py
 
 ### Tests for User Story 5
 
-- [ ] T069 [P] [US5] Write DeleteTaskCommand success tests in tests/test_commands/test_delete.py
-- [ ] T070 [P] [US5] Write DeleteTaskCommand not-found tests in tests/test_commands/test_delete.py
+- [x] T069 [P] [US5] Write DeleteTaskCommand success tests in tests/test_commands/test_delete.py
+- [x] T070 [P] [US5] Write DeleteTaskCommand not-found tests in tests/test_commands/test_delete.py
 
 **Checkpoint**: User Story 5 complete - can delete tasks
 
@@ -228,13 +228,13 @@ Based on plan.md structure:
 
 **Purpose**: Quality assurance and documentation
 
-- [ ] T071 [P] Add comprehensive docstrings to all modules
-- [ ] T072 [P] Run ruff format for PEP 8 compliance
-- [ ] T073 [P] Run ruff check and fix any linting issues
-- [ ] T074 Verify 80% test coverage with pytest --cov=src
-- [ ] T075 [P] Update README.md with setup and usage instructions
-- [ ] T076 Run full test suite and verify all acceptance scenarios pass
-- [ ] T077 Manual testing: Run quickstart.md validation steps
+- [x] T071 [P] Add comprehensive docstrings to all modules
+- [x] T072 [P] Run ruff format for PEP 8 compliance
+- [x] T073 [P] Run ruff check and fix any linting issues
+- [x] T074 Verify 80% test coverage with pytest --cov=src
+- [x] T075 [P] Update README.md with setup and usage instructions
+- [x] T076 Run full test suite and verify all acceptance scenarios pass
+- [x] T077 Manual testing: Run quickstart.md validation steps
 
 **Checkpoint**: All quality standards met, ready for submission
 
