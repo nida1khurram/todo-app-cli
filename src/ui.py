@@ -68,7 +68,8 @@ def display_task_table(tasks: list[Task]) -> None:
     table = Table(show_header=True, header_style="bold")
     table.add_column("ID", style="dim", width=5)
     table.add_column("Status", width=8)
-    table.add_column("Title", width=40)
+    table.add_column("Title", width=30)
+    table.add_column("Description", width=35)
     table.add_column("Created", width=20)
 
     pending_count = 0
@@ -82,7 +83,8 @@ def display_task_table(tasks: list[Task]) -> None:
             pending_count += 1
 
         created_str = task.created_at.strftime("%Y-%m-%d %H:%M:%S")
-        table.add_row(str(task.id), status, task.title, created_str)
+        description = task.description if task.description else "-"
+        table.add_row(str(task.id), status, task.title, description, created_str)
 
     console.print(table)
     summary = f"\nTotal: {len(tasks)} task(s) "
