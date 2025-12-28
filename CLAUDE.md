@@ -208,3 +208,53 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Available Agents
+
+| Agent | Description | When to Use |
+|-------|-------------|-------------|
+| `authentication-agent` | Authentication & authorization expert | Better Auth setup, JWT handling, protected routes, login/signup flows, 401/403 debugging |
+| `fastapi-backend-agent` | FastAPI backend architect | CRUD APIs, SQLModel models, Neon PostgreSQL, JWT middleware, API endpoints |
+| `nextjs-frontend-agent` | Next.js 16+ frontend developer | App Router pages, React Server Components, Tailwind CSS, Better Auth integration |
+| `python-console-agent` | Python CLI application developer | Terminal apps with Rich, UV package management, Pydantic validation, Command pattern |
+| `spec-driven-dev` | Spec-Kit Plus methodology expert | Constitution files, feature specs, API specs, project specification structure |
+
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| `claude_md_generation` | Generate CLAUDE.md files with project context for AI assistants |
+| `cli_interface_design` | Create CLIs using Rich library (Console, Table, Prompt, menus) |
+| `command_pattern_implementation` | Implement Command pattern with abstract base class and dependency injection |
+| `constitution_creation` | Create constitution.md with vision, principles, constraints, tech stack |
+| `data_validation` | Pydantic BaseModel validation with Field constraints and custom validators |
+| `in_memory_storage` | Type-safe in-memory storage with CRUD operations and auto-incrementing IDs |
+| `python_project_structure` | Set up Python 3.13+ project with UV, pyproject.toml, src/ layout |
+| `spec_kit_structure` | Initialize Spec-Kit Plus folder structure for spec-driven development |
+| `spec_writing` | Write feature specs with user stories, acceptance criteria, constraints |
+
+## Available Commands (Spec-Kit Plus)
+
+| Command | Description |
+|---------|-------------|
+| `/sp.adr` | Create Architecture Decision Records |
+| `/sp.analyze` | Cross-artifact consistency and quality analysis |
+| `/sp.checklist` | Generate custom checklist for features |
+| `/sp.clarify` | Identify underspecified areas with clarification questions |
+| `/sp.constitution` | Create or update project constitution |
+| `/sp.git.commit_pr` | Autonomous Git workflow for commits and PRs |
+| `/sp.implement` | Execute implementation plan from tasks.md |
+| `/sp.phr` | Record Prompt History Record for traceability |
+| `/sp.plan` | Execute implementation planning workflow |
+| `/sp.reverse-engineer` | Reverse engineer codebase into SDD artifacts |
+| `/sp.specify` | Create feature specification from description |
+| `/sp.tasks` | Generate actionable tasks.md from design artifacts |
+| `/sp.taskstoissues` | Convert tasks to GitHub issues |
+
+## Pre-Action Checklist
+
+Before running any action, always:
+1. Check available agents in `.claude/agents/`
+2. Check available skills in `.claude/skills/`
+3. Check available commands in `.claude/commands/`
+4. Update this CLAUDE.md if new agents/skills/commands are added
